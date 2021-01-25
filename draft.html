@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css.css">
+<title>Contact Us</title>
+</head>
+<body>
+<div class="topnav">
+<img src="logo.svg" height="50px;" alt="Logo"
+		onmouseout="this.src='logo.svg';" onmouseover="this.src='logo1.svg';">
+<div>
+  <a href="home.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="news.html">News</a>
+  <a href="draft.html">Contact</a>
+</div>
+</div>
+
+<div class="cm"><img src ="ele.png" height="20%" width="100%"></div>
+<div class="view"><img src="image.jpg" width="100%"></div>	
+<div id="Main">
+			<input type="text" placeholder="Name" id="name">
+			<input type="text" placeholder="Subject" id="subj">
+			<input type="text" placeholder="Information" id="info">
+			<input type="text" placeholder="Email" id="Ema">
+			<input type="date" Placeholder="Date" id="da"><br>
+			<input type="time" placeholder="Time" id="time"><br>
+			
+			<button onclick="sub();">Submit Request</button>
+	</div>
+	<div id="Sec"></div>
+	<script> 
+			function sub() {
+			
+		var name = document.getElementById("name");
+		var subj = document.getElementById("subj");
+		var info = document.getElementById("info");
+		var da = document.getElementById("da");
+		var time = document.getElementById("time");
+		var Ema = document.getElementById("Ema");
+		if(name.value == "") //if name is left blank 
+		{
+		document.getElementById("Sec").innerHTML="Name field is Required"; //this error will occur 
+		document.getElementById("Sec").style.color = "red";
+		return false;
+		}
+				if(Ema.value == "") //if Email is left blank 
+		{
+		document.getElementById("Sec").innerHTML="Email field is Required"; //this error will occur 
+		document.getElementById("Sec").style.color = "red";
+		return false;
+		}
+		if (subj.value =="")
+			{
+		document.getElementById("Sec").innerHTML="you must have a Subject Title"; //this error will occur
+		document.getElementById("Sec").style.color = "red";
+		return false;
+		}
+		if (info.value =="")
+		{
+		document.getElementById("Sec").innerHTML="you must provide information"; //this error will occur
+		document.getElementById("Sec").style.color = "red";
+		return false;
+		}
+		if(da.value == "") //if date is left blank 
+		{
+		document.getElementById("Sec").innerHTML="Date field is Required"; //this error will occur 
+		document.getElementById("Sec").style.color = "red";
+		return false;
+		}
+		if(time.value == "") //if time is left blank 
+		{
+		document.getElementById("Sec").innerHTML="Time field is Required"; //this error will occur 
+		document.getElementById("Sec").style.color = "red";
+		return false;
+		}
+		document.getElementById("Sec").innerHTML="Dear " + name.value + " A request has been made<br>" + "Date: "  + da.value +"<br> Time: " + time.value + "<br> Subject: "  + subj.value;
+		document.getElementById("Sec").style.color = "red";
+		document.getElementById("Sec").style.backgroundColor = "white";
+		}
+
+	</script>
+		<a href="https://www.facebook.com/" target="_blank"><img src ="fb.png" class="social" alt="Facebook" 
+		onmouseout="this.src='fb.png';"
+		onmouseover="this.src='facebook.png';"></a>
+		<a href="https://www.Linkedin.com/" target="_blank"><img src ="lk.png" class="social" alt="Linkedin"
+		onmouseout="this.src='lk.png';"
+		onmouseover="this.src='link.png';"></a> 
+		<a href="https://www.Gmail.com/" target="_blank"><img src ="em.png" class="social" alt="Email"
+		onmouseout="this.src='em.png';"
+		onmouseover="this.src='email.png';"></a> 
+		<a href="https://www.instagram.com/" target="_blank"><img src ="ib.png" class="social" alt="Instagram"
+		onmouseout="this.src='ib.png';"
+		onmouseover="this.src='instagram.png';"></a>
+		<a href="https://www.snapchat.com/" target="_blank"><img src="sb.png" class="social" alt="Snapchat"
+		onmouseout="this.src='sb.png';"
+		onmouseover="this.src='snapchat.png';"></a>
+		<a href="https://www.twitter.com/" target="_blank"><img src ="tb.png" class="social" alt="Twitter"
+		onmouseout="this.src='tb.png';"
+		onmouseover="this.src='twitter.png';"></a>
+</body>
+</html>
